@@ -13,8 +13,8 @@ import com.dwz1676.tujiaproject.MainActivity;
 /**
  * Created by Administrator on 2016/7/6.
  */
-public class FeaturesFragment extends Fragment {
-    public FeaturesFragment() {
+public class CharacteristicFragment extends Fragment {
+    public CharacteristicFragment() {
     }
 
     @Override

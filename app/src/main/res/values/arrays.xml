@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menutabNames" >
+    <item name="menu_homepage">dd</item>
+    <item name="menu_characteristic">dd</item>
+    <item name="menu_ad">dd</item>
+    <item name="menu_find">dd</item>
+    <item name="menu_mypage">dd</item>
+    </string-array>
+</resources>

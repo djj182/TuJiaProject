@@ -3,54 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.dwz1676.tujiaproject.MainActivity">
+    android:orientation="vertical" >
+
+    <!-- 用于展现不同内容 -->
 
     <FrameLayout
-        android:id="@id/tvtest"
+        android:id="@id/fl_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></FrameLayout>
+        android:layout_weight="1"
+        />
+    <!-- 用于展现导航标签的容器控件FragmentTabHost -->
 
-    <RadioGroup
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:weightSum="5">
+        android:layout_height="50dp" >
+    </android.support.v4.app.FragmentTabHost>
 
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/homepage_selector" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/characteristic_selector" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@mipmap/ic_launcher" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/find_selector" />
-
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:background="@drawable/mypage_selector" />
-    </RadioGroup>
 </LinearLayout>
