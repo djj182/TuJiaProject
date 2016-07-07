@@ -5,4 +5,8 @@ package com.dwz1676.tujiaproject.Utils;
  */
 public class HttpUtils {
 
+    public  static void  test(){
+
+    }
+
 }
