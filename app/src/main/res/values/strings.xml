@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">TuJiaProject</string>
+    <string name="app_name">途家</string>
+    <string name="discovery_theme">主题</string>
+    <string name="discovery_strategy">攻略</string>
+    <string name="hot_city">热门城市</string>
+    <string name="newest">最新</string>
 </resources>
