@@ -83,7 +83,7 @@ public class FindFragment extends Fragment {
             fragmentList.add(f1);
         }
         //准备适配器
-        adapter = new MyFragmentStatePagerAdapter(getActivity().getSupportFragmentManager());
+        adapter = new MyFragmentStatePagerAdapter(getActivity().getSupportFragmentManager(),fragmentList);
 
         mViewPager.setAdapter(adapter);
 

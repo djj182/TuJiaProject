@@ -15,6 +15,7 @@
     <item name="sv_vp_pic" type="id" />
     <item name="character_ll_dot" type="id" />
     <item name="tv_vp_title" type="id" />
+    <item name="iv_item_vp" type="id" />
     <item name="rl_vpitem" type="id" />
     <item name="header_panel_id" type="id" />
     <item name="rg_id" type="id" />
@@ -22,4 +23,7 @@
     <item name="radiobtn_promotion_id" type="id" />
     <item name="right_menu_id" type="id" />
     <item name="header_bottom_shadow_id" type="id" />
+    <item name="list_item_tag" type="id" />
+    <item name="list_item_tv_info" type="id" />
+    <item name="list_item_iv" type="id" />
 </resources>

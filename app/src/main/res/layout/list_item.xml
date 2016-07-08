@@ -6,12 +6,20 @@
     android:layout_height="240dp">
 
     <ImageView
-        android:id="@id/iv_item_vp"
+        android:id="@id/list_item_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@mipmap/ic_bank_logo_default" />
     <TextView
-        android:id="@id/tv_vp_title"
+        android:id="@id/list_item_tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="重庆打平IP带排位up哦啊的外婆呢等级分外"/>
+    <TextView
+        android:id="@id/list_item_tag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
