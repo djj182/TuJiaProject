@@ -9,4 +9,5 @@
     <color name="divider_color1">#ffb2b2b2</color>
     <color name="ad_text_color">#fff9f9f9</color>
     <color name="actionbar_menu_indicator_color">#ffff3b2f</color>
+    <color name="gray">#777777</color>
 </resources>

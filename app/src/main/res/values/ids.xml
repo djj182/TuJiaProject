@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="fl_container" type="id" />
+    <item name="iv_actionbar_menu_black" type="id" />
+    <item name="header_bottom_shadow" type="id" />
+    <item name="character_lltab" type="id" />
+    <item name="character_tab1" type="id" />
+    <item name="character_tab2" type="id" />
+    <item name="character_tab3" type="id" />
+    <item name="character_flvp_pic" type="id" />
+    <item name="vp_loop_pic" type="id" />
+    <item name="character_cardlistleft" type="id" />
+    <item name="character_cardlistright" type="id" />
     <item name="iv_menutab" type="id" />
+    <item name="sv_vp_pic" type="id" />
+    <item name="character_ll_dot" type="id" />
+    <item name="tv_vp_title" type="id" />
+    <item name="iv_item_vp" type="id" />
+    <item name="rl_vpitem" type="id" />
     <item name="header_panel_id" type="id" />
     <item name="rg_id" type="id" />
     <item name="radiobtn_theme_id" type="id" />
     <item name="radiobtn_promotion_id" type="id" />
     <item name="right_menu_id" type="id" />
     <item name="header_bottom_shadow_id" type="id" />
-    <item name="discovery_viewpager_id" type="id" />
+    <item name="list_item_tag" type="id" />
+    <item name="list_item_tv_info" type="id" />
+    <item name="list_item_iv" type="id" />
 </resources>

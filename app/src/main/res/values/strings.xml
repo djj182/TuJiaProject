@@ -4,4 +4,8 @@
     <string name="discovery_strategy">攻略</string>
     <string name="hot_city">热门城市</string>
     <string name="newest">最新</string>
+    <string name="character_text">特色</string>
+    <string name="features_tab1">浪漫假期</string>
+    <string name="features_tab2">高端品质</string>
+    <string name="features_tab3">新奇住宿</string>
 </resources>
