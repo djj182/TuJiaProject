@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TuJiaProject</string>
+    <string name="character_text">特色</string>
+    <string name="features_tab1">浪漫假期</string>
+    <string name="features_tab2">高端品质</string>
+    <string name="features_tab3">新奇住宿</string>
 </resources>

@@ -11,7 +11,5 @@
         android:id="@id/iv_menutab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
     <!-- 用于展现导航标签的容器控件FragmentTabHost -->
-
 </LinearLayout>
