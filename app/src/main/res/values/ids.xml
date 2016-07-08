@@ -2,4 +2,11 @@
 <resources>
     <item name="fl_container" type="id" />
     <item name="iv_menutab" type="id" />
+    <item name="header_panel_id" type="id" />
+    <item name="rg_id" type="id" />
+    <item name="radiobtn_theme_id" type="id" />
+    <item name="radiobtn_promotion_id" type="id" />
+    <item name="right_menu_id" type="id" />
+    <item name="header_bottom_shadow_id" type="id" />
+    <item name="discovery_viewpager_id" type="id" />
 </resources>
