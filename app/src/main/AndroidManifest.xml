@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.SplashActivity" />
+        <activity android:name=".activities.MoreActivity"/>
     </application>
 
 </manifest>
