@@ -16,4 +16,10 @@
     <item name="character_ll_dot" type="id" />
     <item name="tv_vp_title" type="id" />
     <item name="rl_vpitem" type="id" />
+    <item name="header_panel_id" type="id" />
+    <item name="rg_id" type="id" />
+    <item name="radiobtn_theme_id" type="id" />
+    <item name="radiobtn_promotion_id" type="id" />
+    <item name="right_menu_id" type="id" />
+    <item name="header_bottom_shadow_id" type="id" />
 </resources>
