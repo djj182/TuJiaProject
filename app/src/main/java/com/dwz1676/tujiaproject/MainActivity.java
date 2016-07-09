@@ -1,6 +1,7 @@
 package com.dwz1676.tujiaproject;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,12 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost.TabSpec;
+import android.widget.Toast;
 
+import com.dwz1676.tujiaproject.activities.LoginActivity;
 import com.dwz1676.tujiaproject.fragments.AdFragment;
 import com.dwz1676.tujiaproject.fragments.CharacteristicFragment;
 import com.dwz1676.tujiaproject.fragments.FindFragment;
 import com.dwz1676.tujiaproject.fragments.HomePageFragment;
-import com.dwz1676.tujiaproject.fragments.MyInfoFragment;
+import com.dwz1676.tujiaproject.fragments.MyPageFragment;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -63,15 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void initWidegts() {
         tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-        imageSelectorIds = new int[] { R.drawable.homepage_selector,
-                R.drawable.characteristic_selector,R.drawable.recommend_selector ,R.drawable.find_selector,
-                R.drawable.mypage_selector };
+        imageSelectorIds = new int[]{R.drawable.homepage_selector,
+                R.drawable.characteristic_selector, R.drawable.recommend_selector, R.drawable.find_selector,
+                R.drawable.mypage_selector};
     }
 
     private void aboutFragmentTabHost() {
         List<Fragment> fragments = new LinkedList<>();
         Collections.addAll(fragments, new HomePageFragment(),
-                new CharacteristicFragment(), new AdFragment(),new FindFragment(), new MyInfoFragment());
+                new CharacteristicFragment(), new AdFragment(), new FindFragment(), new MyPageFragment());
         menutabNames = getResources().getStringArray(R.array.menutabNames);
         tabHost.setup(this, getSupportFragmentManager(), R.id.fl_container);
         for (int i = 0; i < menutabNames.length; i++) {
@@ -82,10 +85,31 @@ public class MainActivity extends AppCompatActivity {
             tabHost.getTabWidget().getChildAt(i);
         }
     }
+
     private View getView(int i, String tabName) {
-       View view = View.inflate(this, R.layout.menutab, null);
+        View view = View.inflate(this, R.layout.menutab, null);
         ImageView imageView = (ImageView) view.findViewById(R.id.iv_menutab);
         imageView.setBackgroundResource(imageSelectorIds[i]);
         return view;
+    }
+
+    public void clickSettingButton(View view) {
+        //        loginState=false 未登录
+        int resId = view.getId();
+        //点击之后跳转界面，最下面的三个按键
+        if (resId == R.id.mypage_lend_room || resId == R.id.mypage_invite_friend_fanli || resId == R.id.mypage_tulifang) {
+            Toast.makeText(this, "您点击了【我要出租房屋】", Toast.LENGTH_SHORT).show();
+        } else if (!loginState) {
+            if (resId == R.id.mypage_unpaid || resId == R.id.mypage_wait_comment || resId == R.id.mypage_wait_check_in) {
+                switchToLoginActivity(0);
+            } else switchToLoginActivity(1);
+        }
+//
+    }
+
+    private void switchToLoginActivity(int thirdFlag) {
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        intent.putExtra("thirdFlag", thirdFlag);
+        startActivity(intent);
     }
 }

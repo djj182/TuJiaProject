@@ -26,4 +26,38 @@
     <item name="list_item_tag" type="id" />
     <item name="list_item_tv_info" type="id" />
     <item name="list_item_iv" type="id" />
+    <item name="mypage_setting" type="id" />
+    <item name="mypage_head_text" type="id" />
+    <item name="mypage_head_news" type="id" />
+    <item name="mypage_head_setting" type="id" />
+    <item name="mypage_sv_set" type="id" />
+    <item name="mypage_rl_login" type="id" />
+    <item name="mypage_wait_rl" type="id" />
+    <item name="mypage_unpaid" type="id" />
+    <item name="mypage_wait_comment" type="id" />
+    <item name="mypage_wait_check_in" type="id" />
+    <item name="mypage_mytujia_set_ll" type="id" />
+    <item name="mypage_order" type="id" />
+    <item name="mypage_score" type="id" />
+    <item name="mypage_surplus_money" type="id" />
+    <item name="mypage_gift_card" type="id" />
+    <item name="mypage_taste" type="id" />
+    <item name="mypage_tuyou_card" type="id" />
+    <item name="mypage_custumer_servicer" type="id" />
+    <item name="mypage_divider" type="id" />
+    <item name="mypage_lend_room" type="id" />
+    <item name="mypage_tulifang" type="id" />
+    <item name="mypage_invite_friend_fanli" type="id" />
+    <item name="iv_my_collect" type="id" />
+    <item name="iv_my_house_keeper" type="id" />
+    <item name="mypage_balance" type="id" />
+    <item name="rg_login_id" type="id" />
+    <item name="radiobtn_common_id" type="id" />
+    <item name="radiobtn_phonelogin_id" type="id" />
+    <item name="btn_login" type="id" />
+    <item name="third_login_ll" type="id" />
+    <item name="weixin_login" type="id" />
+    <item name="qq_login" type="id" />
+    <item name="weibo_login" type="id" />
+    <item name="loginactivity_back" type="id" />
 </resources>

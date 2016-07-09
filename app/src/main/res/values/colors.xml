@@ -10,4 +10,8 @@
     <color name="ad_text_color">#fff9f9f9</color>
     <color name="actionbar_menu_indicator_color">#ffff3b2f</color>
     <color name="gray">#777777</color>
+    <color name="divider_color">#00ff00</color>
+    <color name="common_red">#FF0000</color>
+    <color name="qianse_gray">#DEDEDE</color>
+    <color name="btn_pressed">#0000DD</color>
 </resources>

@@ -31,47 +31,47 @@
         android:layout_height="1.0px"
         android:background="@color/divider_color1" />
 
-    <HorizontalScrollView
+
+    <RadioGroup
+        android:id="@id/character_lltab"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@id/character_lltab"
-            android:layout_width="match_parent"
+        <RadioButton
+            android:id="@id/character_tab1"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:background="@drawable/radiobtn_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/features_tab1"
+            android:textColor="@color/features_tab_selector"
+            android:textSize="15sp" />
 
-            <TextView
-                android:id="@id/character_tab1"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="@string/features_tab1"
-                android:textColor="@color/features_tab_selector"
-                android:textSize="15sp" />
+        <RadioButton
+            android:id="@id/character_tab2"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/radiobtn_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/features_tab2"
+            android:textColor="@color/features_tab_selector"
+            android:textSize="15sp" />
 
-            <TextView
-                android:id="@id/character_tab2"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="@string/features_tab2"
-                android:textColor="@color/features_tab_selector"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@id/character_tab3"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="@string/features_tab3"
-                android:textColor="@color/features_tab_selector"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </HorizontalScrollView>
+        <RadioButton
+            android:id="@id/character_tab3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/radiobtn_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/features_tab3"
+            android:textColor="@color/features_tab_selector"
+            android:textSize="15sp" />
+    </RadioGroup>
 
     <FrameLayout
         android:id="@id/character_flvp_pic"

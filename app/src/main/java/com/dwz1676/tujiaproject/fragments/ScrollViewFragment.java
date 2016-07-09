@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dwz1676.tujiaproject.R;
-import com.dwz1676.tujiaproject.Utils.ViewUtils;
+import com.dwz1676.tujiaproject.utils.ViewUtils;
 import com.dwz1676.tujiaproject.adapter.MyAdapter;
 import com.dwz1676.tujiaproject.adapter.MyViewPagerAdapter;
 import com.dwz1676.tujiaproject.bean.RoomInfo;
@@ -28,9 +28,7 @@ import java.util.List;
  */
 public class ScrollViewFragment extends Fragment {
 
-    private ImageView mImageView;
     private LinearLayout mDotLayout;
-    private TextView mTextView;
     private ViewPager mViewPager;
     private ListView mListViewLeft;
     private ListView mListViewRight;
@@ -54,8 +52,6 @@ public class ScrollViewFragment extends Fragment {
     }
 
     private void intiViewPagerView(View view) {
-        mImageView = (ImageView) view.findViewById(R.id.iv_item_vp);
-        mTextView = (TextView) view.findViewById(R.id.tv_vp_title);
         mViewPager = (ViewPager) view.findViewById(R.id.vp_loop_pic);
         mDotLayout = (LinearLayout) view.findViewById(R.id.character_ll_dot);
         mListViewLeft = (ListView) view.findViewById(R.id.character_cardlistleft);
@@ -90,11 +86,11 @@ public class ScrollViewFragment extends Fragment {
         mViewPager.setAdapter(adapter);
     }
     public View getView() {
-        View view =View.inflate(getActivity(), R.layout.vp_item, null);
+        View view =View.inflate(getContext(), R.layout.vp_item, null);
         mVpImageView = (ImageView) view.findViewById(R.id.iv_item_vp);
         mVpTitle = (TextView) view.findViewById(R.id.tv_vp_title);
-        mImageView.setImageResource(R.mipmap.ic_launcher);
-        mVpTitle.setText("hunagying guangling sanya ");
+        mVpImageView.setImageResource(R.mipmap.ic_action_more);
+        mVpTitle.setText("hunagying guanglng  ");
         return view;
     }
 }

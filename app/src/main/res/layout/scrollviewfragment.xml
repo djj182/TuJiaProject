@@ -69,21 +69,24 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:divider="@color/gray"
-                    android:dividerHeight="8dp"></ListView>
+                    android:divider="@color/divider_color1"
+                    android:dividerHeight="8dp"
+                    android:scrollbars="none"></ListView>
 
                 <View
                     android:id="@id/header_bottom_shadow"
-                    android:layout_width="60px"
+                    android:layout_width="40px"
                     android:layout_height="match_parent"
-                    android:background="@color/gray" />
+                    android:background="@color/divider_color1" />
 
                 <ListView
                     android:id="@id/character_cardlistright"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:layout_weight="1"></ListView>
+                    android:layout_weight="1"
+                    android:divider="@color/divider_color1"
+                    android:dividerHeight="8dp"
+                    android:scrollbars="none"></ListView>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>

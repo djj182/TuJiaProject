@@ -1,4 +1,4 @@
-package com.dwz1676.tujiaproject.Utils;
+package com.dwz1676.tujiaproject.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
