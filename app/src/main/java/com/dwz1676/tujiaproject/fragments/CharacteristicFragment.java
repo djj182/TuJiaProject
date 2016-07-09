@@ -13,6 +13,9 @@ import android.widget.LinearLayout;
 
 import com.dwz1676.tujiaproject.R;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Administrator on 2016/7/6.
  */
@@ -22,6 +25,9 @@ public class CharacteristicFragment extends Fragment implements View.OnClickList
     private LinearLayout mLinearLayout;
     private FrameLayout mFramLayout;
     private Fragment scrollViewFragment;
+    private FragmentManager fm;
+    private String[] urlStr=new String[3];
+    private List<Fragment> fragments;
 
     public CharacteristicFragment() {
     }
@@ -35,9 +41,17 @@ public class CharacteristicFragment extends Fragment implements View.OnClickList
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.character_fragment, null);
+        fm = getActivity().getSupportFragmentManager();
         mLinearLayout = (LinearLayout) view.findViewById(R.id.character_lltab);
         mFramLayout = (FrameLayout) view.findViewById(R.id.character_flvp_pic);
-        scrollViewFragment = new ScrollViewFragment();
+        fragments = new LinkedList<>();
+        for(int i=0;i<3;i++){
+            Fragment myFragment=new ScrollViewFragment();
+            Bundle args=new Bundle();
+            args.putString(urlStr[i],urlStr[0]);
+            fragments.add(myFragment);
+        }
+        replaceContainerView(fragments.get(0));
         return view;
     }
 
@@ -51,23 +65,26 @@ public class CharacteristicFragment extends Fragment implements View.OnClickList
 
     @Override
     public void onClick(View v) {
-        FragmentManager fm = getActivity().getSupportFragmentManager();
         switch (v.getId()) {
             case R.id.character_tab1:
-                FragmentTransaction transaction = fm.beginTransaction();
-                transaction.replace(R.id.character_flvp_pic, scrollViewFragment);
-                transaction.commit();
+                replaceContainerView(fragments.get(0));
                 break;
             case R.id.character_tab2:
-                FragmentTransaction transaction2 = fm.beginTransaction();
-                transaction2.replace(R.id.character_flvp_pic, scrollViewFragment);
-                transaction2.commit();
+                replaceContainerView(fragments.get(1));
                 break;
             case R.id.character_tab3:
-                FragmentTransaction transaction3 = fm.beginTransaction();
-                transaction3.replace(R.id.character_flvp_pic, scrollViewFragment);
-                transaction3.commit();
+                replaceContainerView(fragments.get(2));
                 break;
         }
+    }
+
+    /**
+     * @param fragment
+     */
+    private void replaceContainerView(Fragment fragment) {
+
+        FragmentTransaction transaction3 = fm.beginTransaction();
+        transaction3.replace(R.id.character_flvp_pic, fragment);
+        transaction3.commit();
     }
 }

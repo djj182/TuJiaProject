@@ -76,7 +76,7 @@ public class FindFragment extends Fragment {
         final List<Fragment> fragmentList = new ArrayList<>();
         for (int i = 0; i < mRadioGroup.getChildCount(); i++) {
             //往ViewPager里面加入ListFragment,每个Fragment都带有一个具有下拉刷新效果的ListView
-            Fragment f1 = new list_fragment();
+            Fragment f1 = new ListFragment();
             Bundle bundle = new Bundle();
             bundle.putString("name", i + "");
             f1.setArguments(bundle);
