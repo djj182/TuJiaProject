@@ -298,9 +298,9 @@
             android:id="@id/mypage_head_setting"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/menu_black_margin_right"
-            android:gravity="center"
-            android:src="@mipmap/ic_setting" />
+            android:layout_marginLeft="@dimen/menu_black_margin_right"
+            android:src="@mipmap/ic_setting"
+            android:layout_alignParentBottom="true" />
 
         <TextView
             android:id="@id/mypage_head_text"
