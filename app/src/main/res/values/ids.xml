@@ -60,4 +60,10 @@
     <item name="qq_login" type="id" />
     <item name="weibo_login" type="id" />
     <item name="loginactivity_back" type="id" />
+    <item name="vp_wlecome" type="id" />
+    <item name="rg_dot_id" type="id" />
+    <item name="iv_third_pic_id" type="id" />
+    <item name="iv_tiyan_id" type="id" />
+    <item name="vp_loop_rl" type="id" />
+    <item name="listview_ll" type="id" />
 </resources>

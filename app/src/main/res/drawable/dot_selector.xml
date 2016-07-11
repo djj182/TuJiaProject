@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- android:state_enabled:点击当前的控件，是否会触发动作；true（会触发）；false（不会触发）；判断：监听器中的方法是否会触发执行 -->
+    <item android:drawable="@mipmap/page_indicator_focused" android:state_checked="true"/>
+    <item android:drawable="@mipmap/page_indicator_unfocused"/>
+
+</selector>

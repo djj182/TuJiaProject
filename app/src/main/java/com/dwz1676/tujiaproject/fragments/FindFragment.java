@@ -94,6 +94,4 @@ public class FindFragment extends Fragment {
         mImageButton = (IndicatorImageButton) view.findViewById(R.id.right_menu_id);
         mViewPager = (ViewPager) view.findViewById(R.id.discovery_viewpager_id);
     }
-
-
 }

@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.dwz1676.tujiaproject.R;
 import com.dwz1676.tujiaproject.activities.MoreActivity;
@@ -18,8 +17,6 @@ import com.dwz1676.tujiaproject.activities.MoreActivity;
 public class MyPageFragment extends Fragment implements View.OnClickListener {
 
     private View view;
-    private ImageView imageview_setting;
-    private ImageView imageview_setting1;
     private String url;
     public MyPageFragment() {
     }

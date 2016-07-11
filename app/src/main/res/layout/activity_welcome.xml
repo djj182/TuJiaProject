@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/vp_wlecome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<RadioGroup-->
+        <!--android:id="@id/rg_dot_id"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@id/vp_wlecome"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="@dimen/dot_marginbottom_vp"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--android:orientation="horizontal">-->
+    <!--</RadioGroup>-->
+
+
+</RelativeLayout>

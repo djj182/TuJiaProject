@@ -5,4 +5,5 @@
     <dimen name="menu_black_margin_right">20dp</dimen>
     <dimen name="dot_marginbottom_vp">20dp</dimen>
     <dimen name="spacing_medium">10dp</dimen>
+    <dimen name="fab_margin">20dp</dimen>
 </resources>

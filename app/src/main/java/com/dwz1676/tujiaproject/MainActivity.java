@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost.TabSpec;
@@ -19,13 +20,14 @@ import com.dwz1676.tujiaproject.fragments.CharacteristicFragment;
 import com.dwz1676.tujiaproject.fragments.FindFragment;
 import com.dwz1676.tujiaproject.fragments.HomePageFragment;
 import com.dwz1676.tujiaproject.fragments.MyPageFragment;
+import com.dwz1676.tujiaproject.utils.ParseJaonDta;
 
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+// f5354121f8753537a1d5d005;jpush   appkey
     private FragmentTabHost tabHost;
     private int[] imageSelectorIds;
     private String[] menutabNames;
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         initWidegts();
+        List title = ParseJaonDta.getCharacterData("title");
+        Toast.makeText(this,title.toString(),Toast.LENGTH_LONG).show();
         aboutFragmentTabHost();
     }
 
@@ -99,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         //点击之后跳转界面，最下面的三个按键
         if (resId == R.id.mypage_lend_room || resId == R.id.mypage_invite_friend_fanli || resId == R.id.mypage_tulifang) {
             Toast.makeText(this, "您点击了【我要出租房屋】", Toast.LENGTH_SHORT).show();
+            Log.i("CLG","您点击了【我要出租房屋】");
         } else if (!loginState) {
             if (resId == R.id.mypage_unpaid || resId == R.id.mypage_wait_comment || resId == R.id.mypage_wait_check_in) {
                 switchToLoginActivity(0);

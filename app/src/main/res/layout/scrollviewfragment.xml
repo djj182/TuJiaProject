@@ -14,52 +14,30 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@id/vp_loop_rl"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
 
-            <android.support.v4.view.ViewPager
-                android:id="@id/vp_loop_pic"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"></android.support.v4.view.ViewPager>
-
-            <LinearLayout
-                android:id="@id/character_ll_dot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/vp_loop_pic"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="@dimen/dot_marginbottom_vp"
-                android:background="@android:color/transparent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/page_indicator_focused" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/page_indicator_focused" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/page_indicator_focused" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/page_indicator_focused" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/page_indicator_focused" />
-            </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@id/vp_loop_pic"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <RadioGroup
+            android:id="@id/character_ll_dot"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"/>
+    </RelativeLayout>
 
             <LinearLayout
+                android:id="@id/listview_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/vp_loop_pic"
+                android:layout_below="@id/vp_loop_rl"
                 android:orientation="horizontal"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin">
