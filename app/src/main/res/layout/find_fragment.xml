@@ -15,13 +15,14 @@
         android:paddingTop="8dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@id/ll_find_container_id"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_width="wrap_content">
 
             <RadioGroup
-                android:id="@id/rg_id"
+                android:id="@id/mRadioGroup"
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
