@@ -15,7 +15,9 @@ import android.widget.RadioGroup;
 import com.dwz1676.tujiaproject.MainActivity;
 import com.dwz1676.tujiaproject.R;
 import com.dwz1676.tujiaproject.adapter.MyViewPagerAdapter;
+import com.dwz1676.tujiaproject.common.CommonData;
 
+import java.io.File;
 import java.util.LinkedList;
 
 /**
@@ -32,7 +34,9 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPreferences = getSharedPreferences("tencentNews", MODE_PRIVATE);
+        createCatchFile(new File(CommonData.PICCACHE_DIR));
+        createCatchFile(new File(CommonData.JSONCACHE_DIR));
+        sharedPreferences = getSharedPreferences("tujia", MODE_PRIVATE);
         // 根据应用的使用情况，拦截界面
         boolean isUsed = sharedPreferences.getBoolean("isUsed", false);
         //判断是否为第一次启动，是，欢迎界面，否则，启动界面
@@ -167,6 +171,15 @@ public class SplashActivity extends AppCompatActivity {
             if (i == 0)
                 child.setChecked(true);
         }
+    }
+
+   private void  createCatchFile(File file){
+       if(file.exists())
+           return;
+       if(!file.isDirectory()){
+           file.mkdirs();
+       }
+
     }
 
 }

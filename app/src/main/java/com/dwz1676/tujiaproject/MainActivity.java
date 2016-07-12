@@ -18,7 +18,6 @@ import com.dwz1676.tujiaproject.activities.LoginActivity;
 import com.dwz1676.tujiaproject.fragments.AdFragment;
 import com.dwz1676.tujiaproject.fragments.CharacteristicFragment;
 import com.dwz1676.tujiaproject.fragments.FindFragment;
-import com.dwz1676.tujiaproject.fragments.HomePageFragment;
 import com.dwz1676.tujiaproject.fragments.MyPageFragment;
 import com.dwz1676.tujiaproject.utils.ParseJaonDta;
 
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         };
         initWidegts();
         List title = ParseJaonDta.getCharacterData("title");
-        Toast.makeText(this,title.toString(),Toast.LENGTH_LONG).show();
+//        Toast.makeText(this,title.toString(),Toast.LENGTH_LONG).show();
         aboutFragmentTabHost();
     }
 
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void aboutFragmentTabHost() {
         List<Fragment> fragments = new LinkedList<>();
-        Collections.addAll(fragments, new HomePageFragment(),
+        Collections.addAll(fragments, new CharacteristicFragment(),
                 new CharacteristicFragment(), new AdFragment(), new FindFragment(), new MyPageFragment());
         menutabNames = getResources().getStringArray(R.array.menutabNames);
         tabHost.setup(this, getSupportFragmentManager(), R.id.fl_container);

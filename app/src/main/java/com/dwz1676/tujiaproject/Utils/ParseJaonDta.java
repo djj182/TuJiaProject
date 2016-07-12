@@ -1,5 +1,7 @@
 package com.dwz1676.tujiaproject.utils;
 
+import android.util.Log;
+
 import com.dwz1676.tujiaproject.bean.HotUnitsBean;
 import com.dwz1676.tujiaproject.bean.UnitBean;
 import com.dwz1676.tujiaproject.common.CommonData;
@@ -19,16 +21,17 @@ public class ParseJaonDta {
 
     public static List getCharacterData(String type) {
 //57810193e0f55a2914003ac1;appkey
-        File file = new File(CommonData.DOCUMENTS_DIR.concat("/character.txt"));
-//        if (!file.exists()) {
-            HttpUtils22.downLoadFile(CommonData.CHARACTER,CommonData.DOCUMENTS_DIR.concat("/character.txt"));
-//        }
+        File file = new File(CommonData.JSONCACHE_DIR.concat("/character.txt"));
+        Log.i("CLG",CommonData.JSONCACHE_DIR);
+        if (!file.exists()) {
+            HttpUtils22.downLoadFile(CommonData.CHARACTER,CommonData.JSONCACHE_DIR.concat("/character.txt"));
+        }
         String strJson = new String(getJsonData());
         return parseDirect(strJson, type);
     }
 
     private static byte[] getJsonData() {
-        byte[] fromSdcard = ExternalStorageUtil.readDataFromSdcard(CommonData.DOCUMENTS_DIR, "character.txt");
+        byte[] fromSdcard = ExternalStorageUtil.readDataFromSdcard(CommonData.JSONCACHE_DIR, "character.txt");
         return fromSdcard;
     }
 

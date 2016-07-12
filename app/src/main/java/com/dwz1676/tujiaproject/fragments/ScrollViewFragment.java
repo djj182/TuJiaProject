@@ -45,6 +45,7 @@ public class ScrollViewFragment extends Fragment {
     private List<View> viewList;
     private MyViewPagerAdapter mAdapter;
     private List viewpagers;
+    private ListAdapter adapter;
 
     public ScrollViewFragment() {
     }
@@ -83,16 +84,16 @@ public class ScrollViewFragment extends Fragment {
 
 
     private void aboutListVIew(ListView listView) {
-        List<UnitBean> dataList = ParseJaonDta.getCharacterData("listview");
-
-//        for (int i = 0; i < dataList.size(); i++) {
-//            dataList.clear();
-////            if(listView==mListViewLeft&&i%2==0)
-////                dataList.add((UnitBean) ParseJaonDta.getCharacterData("listview").get(i));
-////            else if(listView==mListViewRight&&i%2!=0){
-////            }
-//        }
-        final ListAdapter adapter = new MyAdapter(getActivity().getApplicationContext(), dataList);
+        List<UnitBean> dataListAll = ParseJaonDta.getCharacterData("listview");
+        List<UnitBean> dataList = new LinkedList<>();
+        for (int i = 0; i < dataListAll.size(); i++) {
+            if (listView.getId()==R.id.character_cardlistleft&& (i % 2 == 0))
+                dataList.add( dataListAll.get(i));
+            else if (listView.getId()==R.id.character_cardlistright && i % 2 != 0) {
+                dataList.add(dataListAll.get(i));
+            }
+        }
+        adapter = new MyAdapter(getActivity().getApplicationContext(), dataList);
         listView.setAdapter(adapter);
         ViewUtils.setListViewHeightBasedOnChildren(listView);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -161,7 +162,7 @@ public class ScrollViewFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 int itemId = mViewPager.getCurrentItem();
-                Serializable item = (HotUnitsBean) viewpagers.get(itemId);
+                Serializable item = (UnitBean) adapter.getItem(itemId);
                 switchCharacterDetailActivity(item);
             }
         });

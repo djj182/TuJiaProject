@@ -3,6 +3,8 @@
  */
 package com.dwz1676.tujiaproject.common;
 
+import android.os.Environment;
+
 /**
  * Description： 其他公共目录<br/>
  * Copyright (c) , 2016, Jansonxu <br/>
@@ -19,8 +21,11 @@ public class CommonData {
 //			.getExternalStorageDirectory().toString();
 
 	//jsons数据存储位置
-	public static final String DOCUMENTS_DIR="/storage/sdcard1/tujia/json";
+//	public static final String DOCUMENTS_DIR="/storage/sdcard1/tujia/json";
+	public static String JSONCACHE_DIR = Environment.getExternalStorageDirectory().getPath().concat("/tujia/json");
+	public static String PICCACHE_DIR = Environment.getExternalStorageDirectory().getPath().concat("/tujia/pic");
 	public static final String MOGANSHAN = "http://119.39.253.33/10298486.s21d-10.faiusrd.com/0/ABUIABBEGAAg85ONvAUowO7NhgQ?f=moganshan1-2.txt&v=1468221939&wsiphost=ipdb";
 //	public static final String CHARACTER="http://61.54.84.72/10298486.s21d-10.faiusrd.com/0/ABUIABBEGAAg4pONvAUosN2k-wI?f=character.txt&v=1468221922&wsiphost=local";
 	public static final String CHARACTER="http://61.54.84.72/10298486.s21d-10.faiusrd.com/0/ABUIABBEGAAgm5_OvAUox-uxgAY?f=gethotowall.txt&v=1468239771&wsiphost=local";
+
 }

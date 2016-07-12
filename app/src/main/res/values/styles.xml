@@ -29,6 +29,6 @@
     </style>
 
 
-    <color name="material_primary_color">#fff000</color>
+    <color name="material_primary_color">#BB000000</color>
     <color name="material_primary_color_dark">#0000ff</color>
 </resources>
