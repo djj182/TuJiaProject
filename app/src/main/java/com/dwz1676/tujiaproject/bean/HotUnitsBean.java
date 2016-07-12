@@ -1,11 +1,12 @@
 package com.dwz1676.tujiaproject.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/7/11.
  */
-public class HotUnitsBean {
+public class HotUnitsBean implements Serializable {
 
     /**
      * cityId : 0

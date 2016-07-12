@@ -165,7 +165,7 @@
         <ImageView
             android:id="@+id/weixin_login"
             android:layout_width="0dp"
-
+            android:onClick="thirdLogin"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@mipmap/ic_weixin_login" />

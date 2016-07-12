@@ -66,4 +66,5 @@
     <item name="iv_tiyan_id" type="id" />
     <item name="vp_loop_rl" type="id" />
     <item name="listview_ll" type="id" />
+    <item name="tv_test" type="id" />
 </resources>

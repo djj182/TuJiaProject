@@ -14,24 +14,26 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@id/vp_loop_rl"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
 
-        <android.support.v4.view.ViewPager
-            android:id="@id/vp_loop_pic"
-            android:layout_width="match_parent"
-            android:layout_height="200dp" />
-        <RadioGroup
-            android:id="@id/character_ll_dot"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"/>
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@id/vp_loop_rl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@id/vp_loop_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <RadioGroup
+                    android:id="@id/character_ll_dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:id="@id/listview_ll"

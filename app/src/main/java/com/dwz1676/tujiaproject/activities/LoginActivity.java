@@ -22,16 +22,21 @@ public class LoginActivity extends AppCompatActivity {
         mLoginLayout = findViewById(R.id.third_login_ll);
         Intent intent = getIntent();
         int thirdFlag = intent.getIntExtra("thirdFlag", 0);
-        if(thirdFlag==0)
+        if (thirdFlag == 0)
             mLoginLayout.setVisibility(View.GONE);
-        else if(thirdFlag==1)
+        else if (thirdFlag == 1) {
             mLoginLayout.setVisibility(View.VISIBLE);
+        }
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
+    }
+
+    public void thirdLogin(View view) {
 
     }
 }

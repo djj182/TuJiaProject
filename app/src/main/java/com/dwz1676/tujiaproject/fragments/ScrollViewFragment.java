@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -26,6 +27,7 @@ import com.dwz1676.tujiaproject.utils.ParseJaonDta;
 import com.dwz1676.tujiaproject.utils.ViewUtils;
 import com.lidroid.xutils.BitmapUtils;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -60,6 +62,15 @@ public class ScrollViewFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        aboutViewPager();
+        aboutMenu();
+        aboutListVIew(mListViewLeft);
+        aboutListVIew(mListViewRight);
+        super.onActivityCreated(savedInstanceState);
+    }
+
     /**
      * 用途：初始化界面实例
      */
@@ -68,15 +79,6 @@ public class ScrollViewFragment extends Fragment {
         mDotLayout = (RadioGroup) view.findViewById(R.id.character_ll_dot);
         mListViewLeft = (ListView) view.findViewById(R.id.character_cardlistleft);
         mListViewRight = (ListView) view.findViewById(R.id.character_cardlistright);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        aboutViewPager();
-        aboutMenu();
-        aboutListVIew(mListViewLeft);
-        aboutListVIew(mListViewRight);
-        super.onActivityCreated(savedInstanceState);
     }
 
 
@@ -90,27 +92,25 @@ public class ScrollViewFragment extends Fragment {
 ////            else if(listView==mListViewRight&&i%2!=0){
 ////            }
 //        }
-        ListAdapter adapter = new MyAdapter(getActivity().getApplicationContext(), dataList);
+        final ListAdapter adapter = new MyAdapter(getActivity().getApplicationContext(), dataList);
         listView.setAdapter(adapter);
-
         ViewUtils.setListViewHeightBasedOnChildren(listView);
-    }
-
-    public View getView(int i) {
-        View view = View.inflate(getContext(), R.layout.vp_item, null);
-        ImageView mVpImageView = (ImageView) view.findViewById(R.id.iv_item_vp);
-        TextView mVpTitle = (TextView) view.findViewById(R.id.tv_vp_title);
-        HotUnitsBean hotUnitsBean = (HotUnitsBean) viewpagers.get(i);
-        BitmapUtils bitmapUtils = new BitmapUtils(getActivity());
-        bitmapUtils.display(mVpImageView, hotUnitsBean.getDefaultPicture());
-        mVpTitle.setText(hotUnitsBean.getUnitName());
-        mVpImageView.setOnClickListener(new View.OnClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), CharacterDetailActivity.class));
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Serializable item = (UnitBean) adapter.getItem(position);
+                switchCharacterDetailActivity(item);
             }
         });
-        return view;
+    }
+
+    private void switchCharacterDetailActivity(Serializable item) {
+
+        Intent intent = new Intent(getActivity(), CharacterDetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("itemfeature", item);
+        intent.putExtra("itemfeature", bundle);
+        startActivity(intent);
     }
 
     /**
@@ -147,6 +147,25 @@ public class ScrollViewFragment extends Fragment {
 
             }
         });
+    }
+
+    public View getView(int i) {
+        final View view = View.inflate(getContext(), R.layout.vp_item, null);
+        ImageView mVpImageView = (ImageView) view.findViewById(R.id.iv_item_vp);
+        TextView mVpTitle = (TextView) view.findViewById(R.id.tv_vp_title);
+        HotUnitsBean hotUnitsBean = (HotUnitsBean) viewpagers.get(i);
+        BitmapUtils bitmapUtils = new BitmapUtils(getActivity());
+        bitmapUtils.display(mVpImageView, hotUnitsBean.getDefaultPicture());
+        mVpTitle.setText(hotUnitsBean.getUnitName());
+        mVpImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int itemId = mViewPager.getCurrentItem();
+                Serializable item = (HotUnitsBean) viewpagers.get(itemId);
+                switchCharacterDetailActivity(item);
+            }
+        });
+        return view;
     }
 
     /**

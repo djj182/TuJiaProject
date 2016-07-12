@@ -1,11 +1,14 @@
 package com.dwz1676.tujiaproject.bean;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Administrator on 2016/7/11.
  */
-public class UnitBean {
+public class UnitBean implements Serializable{
 //listView展现的内容
     /**
      * cityId : 10
