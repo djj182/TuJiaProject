@@ -8,4 +8,12 @@
     <item name="menu_mypage">dd5</item>
     </string-array>
 
+    <string-array name="themeTabNames" >
+        <item name="tab_newest">最新</item>
+        <item name="tab_tripRounds">周边游</item>
+        <item name="tab_character">特色</item>
+        <item name="tab_story">故事</item>
+        <item name="tab_check">盘点</item>
+    </string-array>
+
 </resources>

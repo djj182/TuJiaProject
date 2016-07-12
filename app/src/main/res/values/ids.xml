@@ -67,4 +67,24 @@
     <item name="vp_loop_rl" type="id" />
     <item name="listview_ll" type="id" />
     <item name="tv_test" type="id" />
+    <item name="iv_menu_order_id" type="id" />
+    <item name="tv_indent_id" type="id" />
+    <item name="iv__menu_message_id" type="id" />
+    <item name="ll_find_container_id" type="id" />
+    <item name="mRadioGroup" type="id" />
+    <item name="gridview_item_theme_iv" type="id" />
+    <item name="fl_container_id" type="id" />
+    <item name="theme_lltab" type="id" />
+    <item name="gv_images_id" type="id" />
+    <item name="theme_newest" type="id" />
+    <item name="theme_tab2" type="id" />
+    <item name="theme_tab3" type="id" />
+    <item name="theme_tab4" type="id" />
+    <item name="theme_tab5" type="id" />
+    <item name="tv_message_id" type="id" />
+    <item name="fl_container_pic" type="id" />
+    <item name="ll_content_id" type="id" />
+    <item name="list" type="id" />
+    <item name="pic" type="id" />
+    <item name="name" type="id" />
 </resources>

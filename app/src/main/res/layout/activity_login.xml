@@ -128,6 +128,7 @@
         android:text="登录" />
 
     <LinearLayout
+        android:id="@+id/third_login_tip_ll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"

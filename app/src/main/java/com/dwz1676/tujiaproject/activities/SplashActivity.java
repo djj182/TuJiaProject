@@ -1,5 +1,6 @@
 package com.dwz1676.tujiaproject.activities;
 
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -52,9 +53,9 @@ public class SplashActivity extends AppCompatActivity {
             // 思路：
             // 1、找到关心的控件实例（ViewPager）
             initView();
-//            // 关于小圆点
+            // 关于小圆点
 //            aboutDots();
-//            // 关于ViewPager的操作
+            // 关于ViewPager的操作
             aboutViewPager();
             // 将用户的使用信息，存储起来
             saveUseInfoToFile();

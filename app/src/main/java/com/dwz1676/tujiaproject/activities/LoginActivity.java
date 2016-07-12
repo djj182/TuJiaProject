@@ -13,6 +13,7 @@ import com.dwz1676.tujiaproject.R;
 public class LoginActivity extends AppCompatActivity {
 
     private View mLoginLayout;
+    private View mThirdTip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +21,16 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         View back = findViewById(R.id.loginactivity_back);
         mLoginLayout = findViewById(R.id.third_login_ll);
+        mThirdTip = findViewById(R.id.third_login_tip_ll);
         Intent intent = getIntent();
         int thirdFlag = intent.getIntExtra("thirdFlag", 0);
-        if (thirdFlag == 0)
+        if (thirdFlag == 0){
             mLoginLayout.setVisibility(View.GONE);
+            mThirdTip.setVisibility(View.GONE);
+        }
         else if (thirdFlag == 1) {
             mLoginLayout.setVisibility(View.VISIBLE);
+            mThirdTip.setVisibility(View.VISIBLE);
         }
 
         back.setOnClickListener(new View.OnClickListener() {

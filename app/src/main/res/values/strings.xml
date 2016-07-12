@@ -9,4 +9,10 @@
     <string name="features_tab2">高端品质</string>
     <string name="features_tab3">新奇住宿</string>
     <string name="mypage_head_text">我的途家</string>
+    <string name="theme_tab2">周边游</string>
+    <string name="theme_tab3">特色</string>
+    <string name="theme_tab4">故事</string>
+    <string name="theme_tab5">盘点</string>
+    <string name="indent">订单</string>
+    <string name="message">消息</string>
 </resources>
